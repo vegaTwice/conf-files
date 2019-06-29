@@ -1,0 +1,55 @@
+ncmpcpp_directory = ~/.ncmpcpp
+
+lyrics_directory = ~/.lyrics
+
+mpd_host = localhost
+
+mpd_port = 6600
+
+mpd_connection_timeout = 5
+
+mpd_music_dir = ~/Music
+
+mpd_crossfade_time = 3
+
+visualizer_type = ellipse
+
+visualizer_look = ●▮
+
+visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
+
+
+playlist_disable_highlight_delay = 10
+
+
+alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}}
+
+
+song_columns_list_format = (24)[white]{a} (6f)[green]{NE} (35)[yellow]{t|f:Title} (24)[cyan]{b} (5f)[magenta]{l}
+
+progressbar_look = ⮞⮞
+
+
+user_interface = alternative
+
+
+startup_slave_screen = "visualizer"
+
+clock_display_seconds = yes
+
+display_bitrate = yes
+
+volume_color = magenta
+
+state_flags_color = green:b
+
+progressbar_color = white:b
+
+statusbar_color = green
+
+statusbar_time_color = red:b
+
+player_state_color = blue:b
+
+active_window_border = red
+## meh
