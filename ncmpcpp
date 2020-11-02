@@ -1,55 +1,160 @@
-ncmpcpp_directory = ~/.ncmpcpp
+#############################################################################
 
-lyrics_directory = ~/.lyrics
-
-mpd_host = localhost
-
-mpd_port = 6600
-
-mpd_connection_timeout = 5
-
-mpd_music_dir = ~/Music
-
-mpd_crossfade_time = 3
-
-visualizer_type = ellipse
-
-visualizer_look = ●▮
-
-visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
+ncmpcpp_directory = ~/.config/ncmpcpp
+lyrics_directory =/home/vega/.config/ncmpcpp/lyrics
 
 
-playlist_disable_highlight_delay = 10
+#song_list_format = " $5%l $1║{$7 %a $1│$2 %t$1 $R $3%b$1 }|{$6 %f $1}"
 
+#tag_editor_album_format = "{$4(%y)$9 }$7%b$9"
+
+browser_playlist_prefix = "$8playlist$9"
+
+selected_item_prefix = $6
+
+selected_item_suffix = $9
+
+user_interface = "alternative"
+
+
+#mpd_port = "6600"
+
+system_encoding = "utf-8"
+
+
+
+####visualizer settings####
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+
+visualizer_output_name = "visualizer"
+
+visualizer_sync_interval = "20"
+
+visualizer_type = "spectrum"
+
+visualizer_color ="yellow"
+
+visualizer_look = "º|"
+
+
+
+####songs####
+
+#([cyan,date],[cyan, length], [cyan,title] | [cyan,date],[blue,title],[cyan])
+
+song_list_format = "{$7%a $7%l $7%t}|{$7%a $5%t $7}"
+
+#([red,artist],[magenta],[red,length])
+
+#song_status_format = "$2%a $7• $4%t $7• $3%b {}$7• $5"
+song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
+
+
+#([cyan,length],[blue,title],[end current color])
+
+song_library_format = {%n - }{%t}|{%f} 
+
+#([magenta,blue,magenta]|[blue]
+
+now_playing_prefix ="$b$8»$2»$4»$3» "
+
+now_playing_suffix = $/b
+
+#([blue],[cyan,artist],[blue,title],[yellow,album],[magenta,length] 
+
+#song_columns_list_format = "(4)[]{} (15)[cyan]{a} (30)[green]{t} (46)[white]{b} (5)[magenta]{l}"
+song_columns_list_format = (24)[yellow]{a} (6f)[green]{NE} (35)[white]{t|f:Title}(24)[cyan]{b} (5f)[magenta]{l}
+
+
+
+####misc####
 
 alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}}
 
 
-song_columns_list_format = (24)[white]{a} (6f)[green]{NE} (35)[yellow]{t|f:Title} (24)[cyan]{b} (5f)[magenta]{l}
+playlist_disable_highlight_delay = 1
 
-progressbar_look = ⮞⮞
+playlist_separate_albums = "no"
 
+playlist_display_mode = "columns"  #(classic/columns)
 
-user_interface = alternative
+browser_display_mode = "classic"
 
+volume_change_step = "2"
 
-startup_slave_screen = "visualizer"
+progressbar_look = "─╼─"
 
-clock_display_seconds = yes
+#user_interface = "alternative"
 
-display_bitrate = yes
+data_fetching_delay = "yes"
 
-volume_color = magenta
+media_library_primary_tag = "artist"
 
-state_flags_color = green:b
+default_find_mode = "wrapped"
 
-progressbar_color = white:b
+header_visibility = "yes"
 
-statusbar_color = green
+statusbar_visibility = "yes"
 
-statusbar_time_color = red:b
+titles_visibility = "yes"
 
-player_state_color = blue:b
+header_text_scrolling = "yes" 
 
-active_window_border = red
-## meh
+cyclic_scrolling = "no"
+
+playlist_editor_display_mode = columns
+
+#startup_screen = "media_library"
+
+ask_before_clearing_playlists = "yes"
+
+clock_display_seconds = "yes"
+
+display_volume_level = "yes"
+
+display_bitrate = "yes"
+
+display_remaining_time = "yes"
+
+ignore_leading_the = "yes"
+
+mouse_support = "yes"
+
+#use_console_editor = "yes"
+
+autocenter_mode = "no"
+
+show_hidden_files_in_local_browser = no
+
+####colors####
+
+discard_colors_if_item_is_selected = "yes" 
+
+header_window_color = "white"
+
+volume_color = "magenta"
+
+state_line_color = "default"
+
+state_flags_color = "green:b"
+
+main_window_color = "white"
+
+color1 = "white"
+
+color2 = "green"
+
+current_item_prefix = "$(green)$r"
+
+current_item_suffix = "$/r$(end)"
+
+progressbar_color = "yellow"
+
+statusbar_color = "green"
+
+statusbar_time_color = "green:b"
+
+player_state_color = "blue:b"
+
+active_window_border = "red"
