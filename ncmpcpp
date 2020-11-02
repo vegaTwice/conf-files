@@ -1,7 +1,7 @@
 #############################################################################
 
-ncmpcpp_directory = ~/.config/ncmpcpp
-lyrics_directory =/home/vega/.config/ncmpcpp/lyrics
+ncmpcpp_directory = /home/$USER/.config/ncmpcpp
+lyrics_directory =/home/$USER/.config/ncmpcpp/lyrics
 
 
 #song_list_format = " $5%l $1║{$7 %a $1│$2 %t$1 $R $3%b$1 }|{$6 %f $1}"
